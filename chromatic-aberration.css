@@ -1,0 +1,18 @@
+
+
+
+.full_chromatic{
+  text-shadow:
+     0 0 1px white,
+     0 0 3px rgba(255, 215, 0, 0),
+     0.1em 0 0.006em rgba(255, 0, 0, 0.9),
+    -0.1em 0 0.006em rgba(0, 255, 255, 0.9);
+}
+
+body{
+  text-shadow:
+     0 0 1px rgba(255, 215, 0, 0),
+     0 0 3px rgba(255, 215, 0, 0),
+     0.002em 0 0.006em #00264d,
+    -0.004em 0 0.006em #800000;
+}

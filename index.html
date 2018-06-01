@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+<link rel="stylesheet" href="dracula.css">
+<link rel="stylesheet" href="chromatic-aberration.css">
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+<script type='text/javascript'>
+hljs.initHighlightingOnLoad();
+$(document).ready(function() {
+   $('.code').each(function(i, e) {hljs.highlightBlock(e)});
+});
+</script>
+
+<style>
+  body {
+    color:#ABB2BF;
+    background: white;
+    font-family: 'Roboto', sans-serif;
+  }
+</style>
+</head>
+<body>
+
+      <div class="full_chromatic" style="background: #282c34">
+      <span style="color:#fff; font-family: 'Bebas Neue'; font-size: 4em;">A Framework</span>
+
+      </div>
+      <div style="background: #e2e4e9">
+      <div style="font-size: 2em;">from</div>
+      <div style="font-family: 'Bebas Neue';font-size: 4em;">Watson Assistant </div>
+      <span style="font-size: 2em;">to </span> <span style="font-size: 4em;"><b>REACT</b></span>
+
+      <span style="font-size: 2em;">in no </span>
+      <span style="font-size: 1em;  font-family: 'Indie Flower', cursive;">(development)</span>
+      <span style="font-size: 2em;">time. </span>
+
+
+
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+</div>
+
+
+
+
+
+<svg height="500" width="500" style="transform: translate(50%, 0)">
+    <polygon points="400,0 100,0 250,70" class="triangle" />
+    Sorry, your browser does not support inline SVG.
+</svg>
+
+
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+      <div style="background: rgb(235, 235, 235); color:rgb(15, 10, 10)">
+      <span style="font-size: 2em;">$temp_</span> <span style="font-size: 2em;">NAME </span>
+
+      <br/>
+      This you can use inside Watson Dialog to create temporal variables.
+      This variables will be consumed once by the application.
+      They can be used for flags.
+
+
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      </div>
+      <span style="font-size: 2em;">$temp_</span> <span style="font-size: 2em;">buttons</span>
+
+
+
+      <br/>
+      This, for example, will render a row of buttons.
+      <br/>
+      <br/>
+      <div style="width: 100%; overflow: hidden; background: rgb(230, 230, 230);">
+      <div class="code"  style="float: left;"><pre><code class="http">
+        {
+          "buttons": [[
+              {"l": "Intentar de nuevo","t": "Vamos de nuevo."},
+              {"l": "Cancelar", "t": "Cancelemos todo."}
+            ]]
+        }
+      </code></pre></div>
+      <img style="float: right;" src="documentation/buttonsSingleRow.gif"></div>
+
+
+
+
+      <br/>
+      And this, two rows.
+      <br/>
+      <br/>
+      <div style="width: 100%; overflow: hidden;  background: rgb(230, 230, 230);">
+      <div class="code"  style="float: left;"><pre><code class="http">
+        {
+          "buttons":   [
+                          [
+                                  { "l": "Reservas", "t": "Reservas"  },
+                                  { "l": "Precios", "t": "Precios"  },
+                                  { "l": "Promos", "t": "Promos"  },
+                                  { "l": "Como llegar", "t": "Como llegar"  }
+                          ],
+                          [
+                                  { "l": "Servicios", "t": "Servicios"  },
+                                  { "l": "Eventos", "t": "Eventos"  },
+                                  { "l": "Turismo", "t": "Turismo"  },
+                                  { "l": "Empleo", "t": "Empleo"  }
+                          ]
+                        ]
+        }
+      </code></pre></div>
+      <img style="float: right;" src="documentation/buttons.gif"></div>
+
+
+
+
+      <br/>
+      <span style="font-size: 2em;">$temp_</span> <span style="font-size: 2em;">buttonsGrid</span>
+      <br/>
+      And this, two rows but in a Grid
+      <br/>
+      <br/>
+      <div style="width: 100%; overflow: hidden;  background: rgb(230, 230, 230);">
+      <div class="code"  style="float: left;"><pre><code class="http">
+        {
+          "buttons":  [
+                        [
+                          {"l":"Eventos","t":"Cuánto salen los eventos?"},
+                          {"l":"Habitaciones","t":"Cuánto cuestan las habitaciones?"}
+                        ],
+                        [
+                          {"l":"Cocheras","t":"Cuáles son los precios de las cocheras?"}
+                          ,{"l":"Restaurante","t":"Cuéntame sobre el restaurante"}
+                        ]
+                      ]
+      }
+      </code></pre></div>
+      <img style="float: right;"  src="documentation/buttonsGrid.gif"></div>
+
+
+
+      <div style="background: white;">
+      <br/>
+      <span style="font-size: 2em;">$temp_</span> <span style="font-size: 2em;">card</span>
+
+      <br/>
+      And this, as expected, will render a React card.
+      <br/>
+      <br/>
+    </div>
+
+      <div style="background: rgb(230, 230, 230); color:rgb(15, 10, 10)">
+      <span style="font-size: 1em; font-family: 'Indie Flower', cursive;">
+      In short, the idea is to have a 1 to 1 relationship between what Watson can ask for,
+      <br/> and what our app is ready to perform.
+      </div>
+
+            <div style="background: rgb(230, 230, 230);"><br/></div>
+            <div style="background: rgb(230, 230, 230);"><br/></div>
+            <div style="background: rgb(230, 230, 230);"><br/></div>
+            <div style="background: rgb(230, 230, 230);"><br/></div>
+            <div style="background: rgb(235, 235, 235);"><br/></div>
+            <div style="background: rgb(235, 235, 235);"><br/></div>
+            <div style="background: rgb(235, 235, 235);"><br/></div>
+            <div style="background: rgb(235, 235, 235);"><br/></div>
+            <div style="background: rgb(235, 235, 235);"><br/></div>
+            <div style="background: rgb(235, 235, 235);"><br/></div>
+            <br/>
+
+            <div style="background: rgb(220, 220, 220); color:rgb(15, 10, 10)">
+            <span style="font-size: 2em; font-family: 'Indie Flower', cursive;">RECURSION
+            </span><span style="font-size: 2em;">is supported. </span>
+
+      <br/>
+      This means you can nest statements inside other statements, and all should be good.
+
+
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      </div>
+  <div class="code" style="float: right;"><pre><code class="http">
+    {
+        "tabs": [{
+
+            "tabs": {
+              "cards": [{
+                "description": "placeholder description 1.1",
+                "label": "subtitle 1",
+                "thumbnail": "https://place-hold.it/300x500/666/fff/000?text=placeholder%20description%201.1"
+              }, {
+                "description": "placeholder description 1.2",
+                "label": "subtitle 1.2",
+                "thumbnail": "https://place-hold.it/300x500/666/fff/000?text=placeholder%20description%201.2"
+              }]
+            }
+
+          },
+          {
+            "card": {
+              "description": "placeholder description 2.1",
+              "label": "subtitle 2.1",
+              "thumbnail": "https://place-hold.it/300x500/666/fff/000?text=placeholder%20description%202.1"
+            }
+          }
+        ]
+    }
+  </code></pre></div>
+  <img style="float: left;"  src="documentation/recursive.gif"></div>
+
+
+
+
+
+
+  <br/><br/><br/><br/><br/>
+  <br/><br/><br/><br/><br/>
+  <br/><br/><br/><br/><br/>
+  <br/><br/><br/><br/><br/>
+  <br/><br/><br/><br/><br/>
+  <br/><br/><br/><br/><br/>
+  <br/><br/><br/><br/><br/>
+  <div style="background: rgb(230, 230, 230);"><br/></div>
+  <div style="background: rgb(230, 230, 230);"><br/></div>
+  <div style="background: rgb(230, 230, 230);"><br/></div>
+  <div style="background: rgb(230, 230, 230);"><br/></div>
+  <div style="background: rgb(235, 235, 235);"><br/></div>
+  <div style="background: rgb(235, 235, 235);"><br/></div>
+  <div style="background: rgb(235, 235, 235);"><br/></div>
+  <div style="background: rgb(235, 235, 235);"><br/></div>
+  <div style="background: rgb(235, 235, 235);"><br/></div>
+  <div style="background: rgb(235, 235, 235);"><br/></div>
+  <br/>
+
+  <div style="background: rgb(220, 220, 220); color:rgb(15, 10, 10)">
+  <span style="font-size: 2em; font-family: 'Indie Flower', cursive;">WHAT
+  are you waiting for? Go and
+  <span style="font-size: 2em; font-family: 'Indie Flower', cursive;">PLAY
+</div>
+
+  <img src="documentation/trump.gif" style="width:'500px'"></div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
