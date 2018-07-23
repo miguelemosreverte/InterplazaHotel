@@ -1,7 +1,7 @@
 FORMAT: 1A
 HOST: https://cqrhotel.com/
 
-# About
+# CQR-Neuronall Integration
 
 This is the API documentation for the Reservations microservice of CQR's platform, so in this document, you would find all the available endpoints, resources and its details.
 
@@ -26,23 +26,16 @@ The Reservations microservice is responsible to manage the available reservation
 
 # Neuronall-CQR Test
 
-Here we show the usage of the API as proposed.
+Here we show the usage of the API as proposed by CQR first draft.
 
-## API [/api/v1/]
+## API v1 [/api/v1/?cmd={cmd}&client_id={client_id}&apikey={apikey}]
 
 ### getTest_v1.00 [GET]
-+ Attributes 
++ Parameters 
     +  cmd : `getTest_v1.00` (string) - nombre identificador de el comando
     +  client_id : `TEST` (string) - nombre identificador de el cliente
     +  apikey : `5521784ef04d6215d65b55385ec493ab` (string) - llave de autenticación de la API
 
-+ Request (application/json)
-
-        {
-            "cmd": "getTest_v1.00",
-            "client_id": "TEST",
-            "apikey": "5521784ef04d6215d65b55385ec493ab"
-        }
 
 + Response 200 (application/json)
 
@@ -66,11 +59,7 @@ Here we show the usage of the API as proposed.
 
 + Request (application/json)
 
-        {
-            "cmd": "getTest_v1.00",
-            "client_id": "TEST",
-            "apikey": "5521784ef04d6215d65b55385ec493ab"
-        }
+        %7B%22cmd%22%3A%22getTest_v1.00%22%2C%22client_id%22%3A%22TEST%22%2C%22apikey%22%3A%225521784ef04d6215d65b55385ec493ab%22%7D
 
 + Response 200 (application/json)
 
@@ -83,3 +72,37 @@ Here we show the usage of the API as proposed.
                 "data": { "dateTime": "2018-07-23 12:45:05"}
                 }
         }
+        
+
+
+## API v2 [/api/v2/?hotel={hotel}&desde={desde}&hasta={hasta}&apikey={apikey}&nombre={nombre}&apellido={apellido}&email={email}&children={children}&grownups={grownups}]
+
+Here we show the usage of the API as proposed by Neuronall, as a second draft.
+
+### getTest_v2.00 [GET]
++ Parameters 
+    +  hotel : `InterplazaHotel` (string) - nombre identificador de el hotel
+    +  desde : `2018-07-23` (string) - fecha de inicio de reserva
+    +  hasta : `2018-07-30` (string) - fecha de fin de reserva
+    +  apikey : `5521784ef04d6215d65b55385ec493ab` (string) - llave de autenticación de la API
+    +  nombre : `Margaret` (string) - nombre de la persona
+    +  apellido : `Tatcher` (string) - apellido de la persona
+    +  email : `theIronLady@gmail.com` (string) - email de la persona
+    +  children : `0` (integer) - cantidad de niños
+    +  grownups : `0` (integer) - cantidad de adultos
+
+
++ Response 200 (application/json)
+
+        [
+                {
+                "nombre_habitación": "11",
+                "image": "http://yoguitec.com/cqr/wp-content/uploads/2018/07/Habitaciones-Doble-Matrimonial-Standard-925x465.jpg" ,
+                "data": { "etc": "datos varios"}
+                },
+                {
+                "nombre_habitación": "11",
+                "image": "http://yoguitec.com/cqr/wp-content/uploads/2018/07/Habitaciones-Doble-Matrimonial-Standard-925x465.jpg" ,
+                "data": { "etc": "datos varios"}
+                }
+        ]
