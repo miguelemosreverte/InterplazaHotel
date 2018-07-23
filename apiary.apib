@@ -1,0 +1,85 @@
+FORMAT: 1A
+HOST: https://cqrhotel.com/
+
+# About
+
+This is the API documentation for the Reservations microservice of CQR's platform, so in this document, you would find all the available endpoints, resources and its details.
+
+The Reservations microservice is responsible to manage the available reservation gateways and its configurations.
+
+# HTTP Request Basics
+## Allowed HTTP methods
+
+- `GET` - Should be used to get a list or details about a object or resource
+- `POST` - Should be used to create a new object
+
+## Typical Server Responses
+
+- 200 `OK` - The request was successful (some API calls may return 201 instead)
+- 201 `Created` `TODO` - The request was successful and the object was created
+- 400 `Bad Request` `TODO` - The request could not be understood or was missing required parameters
+- 404 `Not Found` `TODO` - The resource or endpoint was not found
+- 500 `Internal Server Error` `TODO` - An error ocurred at try to perform the request
+- 503 `Service Unavailable` `TODO` - The service is temporary unavailable, try again later
+
+
+
+# Neuronall-CQR Test
+
+Here we show the usage of the API as proposed.
+
+## API [/api/v1/]
+
+### getTest_v1.00 [GET]
++ Attributes 
+    +  cmd : `getTest_v1.00` (string) - nombre identificador de el comando
+    +  client_id : `TEST` (string) - nombre identificador de el cliente
+    +  apikey : `5521784ef04d6215d65b55385ec493ab` (string) - llave de autenticación de la API
+
++ Request (application/json)
+
+        {
+            "cmd": "getTest_v1.00",
+            "client_id": "TEST",
+            "apikey": "5521784ef04d6215d65b55385ec493ab"
+        }
+
++ Response 200 (application/json)
+
+        {
+            "gettest":
+                {
+                "client_id": "TEST",
+                "error_code": "0" ,
+                "error_description": "" ,
+                "data": { "dateTime": "2018-07-23 12:45:05"}
+                }
+        }
+        
+        
+               
+### postTest_v1.00 [POST]
++ Attributes 
+    +  cmd : `getTest_v1.00` (string) - nombre identificador de el comando
+    +  client_id : `TEST` (string) - nombre identificador de el cliente
+    +  apikey : `5521784ef04d6215d65b55385ec493ab` (string) - llave de autenticación de la API
+
++ Request (application/json)
+
+        {
+            "cmd": "getTest_v1.00",
+            "client_id": "TEST",
+            "apikey": "5521784ef04d6215d65b55385ec493ab"
+        }
+
++ Response 200 (application/json)
+
+        {
+            "gettest":
+                {
+                "client_id": "TEST",
+                "error_code": "0" ,
+                "error_description": "" ,
+                "data": { "dateTime": "2018-07-23 12:45:05"}
+                }
+        }
