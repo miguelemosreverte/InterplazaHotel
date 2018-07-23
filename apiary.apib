@@ -28,7 +28,7 @@ The Reservations microservice is responsible to manage the available reservation
 
 Here we show the usage of the API as proposed by CQR first draft.
 
-## API v1 [/api/v1/?cmd={cmd}&client_id={client_id}&apikey={apikey}]
+## API v1 GET [/api/v1/?cmd={cmd}&client_id={client_id}&apikey={apikey}]
 
 ### getTest_v1.00 [GET]
 + Parameters 
@@ -50,29 +50,16 @@ Here we show the usage of the API as proposed by CQR first draft.
         }
         
         
-               
-### postTest_v1.00 [POST]
-+ Attributes 
-    +  cmd : `getTest_v1.00` (string) - nombre identificador de el comando
-    +  client_id : `TEST` (string) - nombre identificador de el cliente
-    +  apikey : `5521784ef04d6215d65b55385ec493ab` (string) - llave de autenticación de la API
 
-+ Request (application/json)
+## API v1 POST [/api/v1/]               
+### postTest_v1.00 [POST]
++ Request (application/x-www-form-urlencoded)
 
         %7B%22cmd%22%3A%22getTest_v1.00%22%2C%22client_id%22%3A%22TEST%22%2C%22apikey%22%3A%225521784ef04d6215d65b55385ec493ab%22%7D
 
-+ Response 200 (application/json)
++ Response 200 (text/html)
 
-        {
-            "gettest":
-                {
-                "client_id": "TEST",
-                "error_code": "0" ,
-                "error_description": "" ,
-                "data": { "dateTime": "2018-07-23 12:45:05"}
-                }
-        }
-        
+        CQRHotel API v1.00 XML/JSON 1.0 OK. DateTime Server: 2018-07-23 14:40:14
 
 
 ## API v2 [/api/v2/?hotel={hotel}&desde={desde}&hasta={hasta}&apikey={apikey}&nombre={nombre}&apellido={apellido}&email={email}&children={children}&grownups={grownups}]
